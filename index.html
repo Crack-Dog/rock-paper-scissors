@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="rock">Rock</button>
+    <button id="paper">paper</button>
+    <button id="scissor">scissor</button>
     <script>
         console.log("Hello World")
         let humChoice = "none";
@@ -86,14 +89,42 @@
             }
             return result;
         }
-
-
         
-        console.log(getComputerChoice())
-        console.log(getHumanChoice())
-        console.log(playRound(humChoice, compChoice))
         console.log(humanScore)
         console.log(computerScore)
+
+
+        const rockbtn = document.querySelector("#rock");
+        rockbtn.addEventListener("click", () => {
+            humChoice = "rock";
+            getComputerChoice();
+            playRound(humChoice, compChoice);
+            console.log(humanScore);
+            console.log(computerScore);
+            }
+        )
+
+        const paperbtn = document.querySelector("#paper");
+        paperbtn.addEventListener("click", () => {
+            humChoice = "paper";
+            getComputerChoice();
+            playRound(humChoice, compChoice);
+            console.log(humanScore);
+            console.log(computerScore);
+            }
+        )
+
+        const scissorbtn = document.querySelector("#scissor");
+        scissorbtn.addEventListener("click", () => {
+            humChoice = "scissor";
+            getComputerChoice();
+            playRound(humChoice, compChoice);
+            console.log(humanScore);
+            console.log(computerScore);
+            }
+        )
+
+
     </script>
 </body>
 </html>
